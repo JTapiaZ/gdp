@@ -143,4 +143,9 @@ exports.all_sena = (req, res) => {
         });
       });
   };
+
+  exports.log = (req, res) => {
+    console.log('WORKS');
+    res.status(200).send('WORKS')
+  }
   

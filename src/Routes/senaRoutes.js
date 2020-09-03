@@ -8,6 +8,8 @@ const sena_controller = require("../controllers/senaController");
 
 router.route("/list").get(sena_controller.all_sena);
 
+router.route("/").get(sena_controller.log);
+
 router.route("/details/:id").get(sena_controller.sena_details);
 
 router.route("/create").post(sena_controller.sena_create);
