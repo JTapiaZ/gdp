@@ -37,4 +37,5 @@ app.use('/api/bussiness', require('./src/Routes/bussinessRoutes'));
 // Run the server
 app.listen(process.env.PORT, () => {
     console.log(`Servidor corriendo en el puerto ${process.env.PORT}`);
+    res.end('LO QUE TE DE LA GANA EN ESA MMGVADA!')
 });
