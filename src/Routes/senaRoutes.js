@@ -21,14 +21,21 @@ router.route("/delete/:id").delete(sena_controller.sena_delete);
 // var upload = multer({ dest: "Upload_folder_name" }) 
 // If you do not want to use diskStorage then uncomment it 
 
+const d = new Date()
+const ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d)
+const mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d)
+const da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d)
+const ho = new Intl.DateTimeFormat('en', { hour: '2-digit' }).format(d)
+const mi = new Intl.DateTimeFormat('en', { minute: '2-digit' }).format(d)
+
 var storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
   
         // Uploads is the Upload_folder_name 
-        cb(null, "./src/subidas") 
+        cb(null, "./src/subidasSena")
     }, 
     filename: function (req, file, cb) { 
-      cb(null, file.fieldname + "-" + file.fieldname +".zip") 
+      cb(null, ye + "-" + mo + "-" + da + "-" + ho + "-" + mi + "-" + file.fieldname + "-" + file.originalname) 
     } 
   }) 
        
@@ -48,12 +55,14 @@ var storage = multer.diskStorage({
         var extname = filetypes.test(path.extname( 
                     file.originalname).toLowerCase()); 
         
+        // console.log(file.originalname);
+        
         if (mimetype && extname) { 
             return cb(null, true); 
         } 
       
-        cb("Error: File upload only supports the "
-                + "following filetypes - " + filetypes); 
+        cb("Error: No puede subir achivos de este tipo "
+                + "tipo de archivo - " + filetypes); 
       }  
   
   // mypic is the name of file attribute 
@@ -79,7 +88,7 @@ var storage = multer.diskStorage({
         else { 
   
             // SUCCESS, image successfully uploaded 
-            res.send("Success, Archive uploaded!") 
+            res.send("Bien, Archivo cargado exitosamente!") 
         } 
     }) 
   }) 
