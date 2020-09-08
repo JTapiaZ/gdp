@@ -32,6 +32,7 @@ app.use(cors())
 app.use('/api/natural', require('./src/Routes/naturalRoutes'));
 app.use('/api/sena', require('./src/Routes/senaRoutes'));
 app.use('/api/bussiness', require('./src/Routes/bussinessRoutes'));
+app.use('/api/contact', require('./src/Routes/contactRoutes'));
 
 
 // Run the server
