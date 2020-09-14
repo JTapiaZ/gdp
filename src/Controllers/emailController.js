@@ -5,15 +5,14 @@ exports.emailSend = (data) => {
         service: 'gmail', 
         auth: 
         {
-            user: "senamecuida@gmail.com",
+            user: "gestorproyectosfbs@gmail.com",
             pass: "fabrica2020"
         }
     })
     let email = 
     {
         from: "senamecuida@gmail.com",
-        to: "ylondono283@misena.edu.co",
-        cc: "jjtapias20@misena.edu.co",
+        to: "gestorproyectosfbs@gmail.com",
         subject: "¡Solicitud de información!",
         html: `                                                     
             <!DOCTYPE html>
