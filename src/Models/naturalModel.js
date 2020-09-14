@@ -45,7 +45,7 @@ module.exports = (sequelize, type) => {
           max: 5000
         },    
         deadline: {
-          type: type.DATE,
+          type: type.STRING,
           max: 25
         },
     })
