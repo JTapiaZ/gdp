@@ -38,5 +38,4 @@ app.use('/api/contact', require('./src/Routes/contactRoutes'));
 // Run the server
 app.listen(process.env.PORT, (res) => {
     console.log(`Servidor corriendo en el puerto ${process.env.PORT}`);
-    // res.send('LO QUE TE DE LA GANA EN ESA MMGVADA!')
 });
