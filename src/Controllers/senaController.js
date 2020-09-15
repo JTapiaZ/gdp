@@ -18,8 +18,8 @@ exports.sena_create = function (req, res) {
         res.send("¡Solicitud registrada con exito!");
       })
       .catch(err => {
-        res.status(500).send("¡Ocurrio un error al registrar la solicitud!");
-        console.log(err)
+        res.status(500).send(err);
+        // console.log(err)
       });
   };
   

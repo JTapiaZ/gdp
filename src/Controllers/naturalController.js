@@ -25,11 +25,8 @@ exports.natural_create = function (req, res) {
         });
       })
       .catch(err => {
-        res.status(500).send({
-          success: false,
-          message: "¡Ocurrio un error al registrar la solicitud!"
-        });
-        console.log(err)
+        res.status(500).send(err);
+        // console.log(err)
       });
   };
   
